@@ -103,11 +103,17 @@ gcloud compute --project=prj-croud-dev-schema-org firewall-rules create schemaor
 ## App Engine
 
 - [ ] Create app engine via `gcloud app create`
+- [ ] GCS bucket creation:
+   - prj-croud-dev-schema-org.appspot.com
+   - staging.prj-croud-dev-schema-org.appspot.com
 - [ ] GCS file uploads
+- [ ] Grant default app engine SA object viewer on the two buckets
 ```
 ╔════════════════════════════════════════════════════════════╗
 ╠═ Uploading 3118 files to Google Cloud Storage             ═╣
 ╚════════════════════════════════════════════════════════════╝
 File upload done.
-Updating service [default]...failed.                                                                                             
+Updating service [default]...
+failed.
+
 ```
