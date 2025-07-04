@@ -2,15 +2,15 @@
 set -e
 set -u
 
-#schemaorg deployment to gcloud script
+#at-html-schemaorg deployment to gcloud script
 
 PWD=`pwd`
 PROG="`basename $0`"
 echo ${PROG}
 echo
-if [ `basename $PWD` != "schemaorg" ]
+if [ `basename $PWD` != "at-html-schemaorg" ]
 then
-	echo "Not in the schemaorg directory! Aborting"
+	echo "Not in the at-html-schemaorg directory! Aborting"
 	exit 1
 fi
 if [ ! -d "software/site" ]

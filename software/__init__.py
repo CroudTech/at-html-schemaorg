@@ -26,9 +26,7 @@ def Setup():
     for path in LIB_PATHS:
         absolute_path = os.path.join(os.getcwd(), path)
         if not os.path.isdir(absolute_path):
-            sys.stderr.write(
-                'Required directory "%s" not found - Exiting\n' % absolute_path
-            )
+            sys.stderr.write('Required directory "%s" not found - Exiting\n' % absolute_path)
             sys.exit(os.EX_CONFIG)
         sys.path.insert(1, absolute_path)
 
@@ -37,17 +35,13 @@ def Setup():
 
 def CheckWorkingDirectory():
     """Check that the working directory is correct and contains the right directories."""
-    if os.path.basename(os.getcwd()) != "schemaorg":
-        sys.stderr.write(
-            'Script should be run from within the "schemaorg" directory! - Exiting\n'
-        )
+    if os.path.basename(os.getcwd()) != "at-html-schemaorg":
+        sys.stderr.write('Script should be run from within the "at-html-schemaorg" directory! - Exiting\n')
         sys.exit(os.EX_USAGE)
 
     for directory_name in DATA_PATHS:
         if not os.path.isdir(directory_name):
-            sys.stderr.write(
-                'Required directory "%s" not found - Exiting\n' % directory_name
-            )
+            sys.stderr.write('Required directory "%s" not found - Exiting\n' % directory_name)
             sys.exit(os.EX_CONFIG)
 
 
